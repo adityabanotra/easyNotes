@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/css/home.css">
 </head>
 <body>
-    <h1>Home yaah</h1>
+    <h1>TO DO</h1>
+    <br>
+    <ul>
+    <%for(let i of work) {%>
+    <li>
+    <%=i.work%> <br>
+    <%=i.time%>
+    </li>
+
+    <%}%>
+
+    <form action="/add-work" method="POST">
+        <input type="text" name="work" required>
+        <input type="text" name="time" required>
+        <button>submit</button>
+    </form>
+</ul>
 </body>
+
+<script src="/js/home.js"></script>
 </html>
