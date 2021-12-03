@@ -12,8 +12,10 @@
     <ul>
     <%for(let i of work) {%>
     <li>
-    <%=i.work%> <br>
+    <%=i.name%> <br>
     <%=i.time%>
+    &nbsp; &nbsp; &nbsp;
+    <a href="delete-it/<%=i.id%>">del</a>
     </li>
 
     <%}%>
