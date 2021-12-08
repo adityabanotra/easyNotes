@@ -21,13 +21,13 @@ app.use(express.urlencoded()); // this is parser(midleware)used to get data from
 app.use(express.static('assets')); // middleware to give asset path to static files
 
 //use express router
-// app.use('/', require('./routes/index'));
+app.use('/', require('./routes/index'));
 
-app.get('/', function(req,res){
-    return res.render('home',{
-        title:'home'
-    });
-})
+// app.get('/', function(req,res){
+//     return res.render('home',{
+//         title:'home'
+//     });
+// })
 
 app.listen(port,function(err){
     if(err)
