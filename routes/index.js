@@ -9,4 +9,10 @@ Router.get('/login',function(req,res){
         title:'Login'
     });
 });
+
+Router.get('/explore',function(req,res){
+    return res.render('explore',{
+        title:'Explore'
+    });
+});
 module.exports = Router;

@@ -1,6 +1,10 @@
 body{
     text-align: center;
     background : #181818;
+    margin: 0px;
+    max-width: 100%;
+    overflow-x: hidden;
+   
 }
 
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
@@ -23,23 +27,51 @@ body{
   font-weight: 700;
   color: #6200ff;
   text-align: left;
+  margin-top: 17px;
+  transition: .5s;
 }
-#logo:hover{
-  color:#a231ff;
-  border: 0px solid;
-}
+
 #contri{
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
-  height: 50px;
+  height: 40px;
   width: 130px;
   border: 2px solid #ffffff;;
-  padding-top:20px;
+  padding-top:15px;
   color: #ffffff;
   font-family: montserrat;
   transition: .3s;
 }
+.explore:before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.explore:hover:before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.explore:before {
+  content: " ";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  border-bottom: 4px solid #6200ff;
+ 
+  transition: transform .3s ease;
+}
+.explore
+{
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.explore:hover
+{
+  color: #6200ff;
+}
+
 
 #contri:hover
 {
@@ -48,9 +80,9 @@ body{
   
 }
 
-@media all and (max-width:900px)
+@media all and (max-width:1000px)
 {
-  #contri{
+  .contri{
     display:none;
   }
 }
@@ -70,24 +102,31 @@ body{
     justify-content: left;
   }
 }
-
+@media all and (max-width:850px)
+{
+  .login{
+    display: none;
+  }
+}
 @media all and (max-width:750px)
 {
-  #explore{
+  .exxplore{
     display: none;
   }
 }
 
-#explore{
+.menu-iconn{
   font-size: 35px;
   font-weight: 550;
   border-radius: 10px;
+  transition: .5s;
  
   // border: 2px solid #6200ff;
   padding-top:20px;
   color: #ffffff;
   font-family: montserrat;
 }
+
 
 .section-center{
   position: absolute;
