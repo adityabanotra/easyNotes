@@ -6,20 +6,58 @@
 
 .branch
 {
-    height:350px;
+    height:400px;
     width:350px;
     margin: 20px;
-    // border : 2px solid red;
     text-align: center;
     margin-bottom: 50px;
+    background-color: #ffffff;
     
+    
+}
+
+.branch {
+    position: relative;
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      border: 2px solid #6f00ff;
+      transition: all .25s ease-out;
+    }
+    &::before {
+      background-color: #6f00ff;
+      top: -15px;
+      left: -15px;
+    }
+    &::after {
+      bottom: -15px;
+      right: -15px;
+    }
+    &:hover {
+      &::before {
+        top: 15px;
+        left: 15px;
+      }
+      &::after {
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  }
+.branch:hover{
+    box-shadow: none ;
 }
 
 .branch-img
 {
     margin: auto;
-    width : 300px;
-    height : 250px;
+    width : 350px;
+    height : 300px;
+    border-radius: 10px;
 }
 #civ-img
 {

@@ -631,7 +631,7 @@ a{
 
 
 // Main styles
-form {
+#searchf {
   position: relative;
   width: 60vw;
   background: #fff;
@@ -676,7 +676,7 @@ button {
   background: #6200ff;
   border-radius: 0 var(--rad) var(--rad) 0;
 }
-input:not(:placeholder-shown) {
+#search:not(:placeholder-shown) {
   border-radius: var(--rad) 0 0 var(--rad);
   width: calc(100% - 6.5rem);
   content: none;
