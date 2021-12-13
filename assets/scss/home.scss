@@ -86,11 +86,12 @@ body{
     display:none;
   }
 }
+
 @media all and (max-width:450px)
 {
   #logo{
-    transform: scale(.5);
-    margin-left: -50px;
+    transform: scale(.75);
+    margin-left: -30px;
   }
 
  .nav li
@@ -112,6 +113,14 @@ body{
 {
   .exxplore{
     display: none;
+  }
+}
+
+@media all and (max-width:350px)
+{
+  #logo{
+    transform: scale(.5);
+    margin-left: -50px;
   }
 }
 
@@ -638,10 +647,20 @@ a{
   border-radius: var(--rad);
   margin: auto;
 }
+
+@media all and (max-width:900px)
+{
+  #search{
+    left: -10vw;
+    width: 80vw;
+  }
+}
+
 @media all and (max-width:600px)
 {
-  form{
-    width: 90vw;
+  #search{
+    left: -17.5vw;
+    width: 95vw;
   }
 }
 input, button {

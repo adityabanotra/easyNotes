@@ -16,6 +16,19 @@
     
 }
 
+@media all and (max-width:500px)
+{
+  .branch-text{
+    color: #ffffff;
+  }
+  .branch
+  {
+    transform: scale(.95);
+    
+  }
+  
+}
+
 .branch {
     position: relative;
     &::before,
@@ -91,10 +104,11 @@
 }
 
 .branch-text{
+  // z-index: 10;
     margin-top: 10px;
     font-size: 30px;
     font-weight: 600;
     font-family: montserrat;
-    color:#6f00ff;
+    color:#620fff;
 
 }
