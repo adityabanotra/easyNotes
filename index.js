@@ -8,7 +8,7 @@ const app = express();
 const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
-
+const MongoStore = require('connect-mongo');
 
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));  
@@ -32,7 +32,18 @@ app.use(session({
     resave : false,
     cookie : {
         maxAge: (1000*60*100)
-    }
+    },
+    store:  MongoStore.create(
+        {
+            mongooseConnection: db,
+            mongoUrl: 'mongodb://localhost/easyNotesDB',
+            autoRemove: 'disabled'
+        
+        },
+        function(err){
+            console.log(err ||  'connect-mongodb setup ok');
+        }
+    )
 }));
 
 app.use(passport.initialize());

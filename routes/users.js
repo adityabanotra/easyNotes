@@ -12,7 +12,7 @@ Router.post('/create-session', passport.authenticate(
     'local',
     {failureRedirect:'/user/login'},
 ), userController.createSession );
-
+Router.get('/sign-out', userController.destroy);
 
 
 
